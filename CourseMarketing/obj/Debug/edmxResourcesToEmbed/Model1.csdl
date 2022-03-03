@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ip35Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Login" />
+    </Key>
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="DeptMar" EntityType="ip35Model.DeptMar" />
+    <EntitySet Name="ListServiceMar" EntityType="ip35Model.ListServiceMar" />
+    <EntitySet Name="OrderMar" EntityType="ip35Model.OrderMar" />
+    <EntitySet Name="PositionMar" EntityType="ip35Model.PositionMar" />
+    <EntitySet Name="ServiceMar" EntityType="ip35Model.ServiceMar" />
+    <EntitySet Name="StatusContractMar" EntityType="ip35Model.StatusContractMar" />
+    <EntitySet Name="StatusPaymentMar" EntityType="ip35Model.StatusPaymentMar" />
+    <EntitySet Name="StatusSeviceMar" EntityType="ip35Model.StatusSeviceMar" />
+    <AssociationSet Name="FK_OrderMar_ServiceMar" Association="ip35Model.FK_OrderMar_ServiceMar">
+      <End Role="ServiceMar" EntitySet="ServiceMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMar_StatusContractMar" Association="ip35Model.FK_OrderMar_StatusContractMar">
+      <End Role="StatusContractMar" EntitySet="StatusContractMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMar_StatusPaymentMar" Association="ip35Model.FK_OrderMar_StatusPaymentMar">
+      <End Role="StatusPaymentMar" EntitySet="StatusPaymentMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+    <EntitySet Name="ClientMar" EntityType="ip35Model.ClientMar" />
+    <AssociationSet Name="FK_OrderMar_ClientMar" Association="ip35Model.FK_OrderMar_ClientMar">
+      <End Role="ClientMar" EntitySet="ClientMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DeptMar">
+    <Key>
+      <PropertyRef Name="Id_Dept" />
+    </Key>
+    <Property Name="Id_Dept" Type="Int32" Nullable="false" />
+    <Property Name="Name_Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListServiceMar">
+    <Key>
+      <PropertyRef Name="id_List_Service" />
+    </Key>
+    <Property Name="id_List_Service" Type="Int32" Nullable="false" />
+    <Property Name="id_Order" Type="Int32" />
+    <Property Name="id_Service" Type="Int32" />
+    <Property Name="id_Dept" Type="Int32" />
+    <Property Name="id_Status_Service" Type="Int32" />
+  </EntityType>
+  <EntityType Name="OrderMar">
+    <Key>
+      <PropertyRef Name="id_Order" />
+    </Key>
+    <Property Name="id_Order" Type="Int32" Nullable="false" />
+    <Property Name="id_Client" Type="Int32" />
+    <Property Name="Number_Contract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Creation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Execution" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_Status_Payment" Type="Int32" />
+    <Property Name="Detail_Order" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="id_Status_Order" Type="Int32" />
+    <Property Name="id_Service" Type="Int32" />
+    <NavigationProperty Name="ServiceMar" Relationship="ip35Model.FK_OrderMar_ServiceMar" FromRole="OrderMar" ToRole="ServiceMar" />
+    <NavigationProperty Name="StatusContractMar" Relationship="ip35Model.FK_OrderMar_StatusContractMar" FromRole="OrderMar" ToRole="StatusContractMar" />
+    <NavigationProperty Name="StatusPaymentMar" Relationship="ip35Model.FK_OrderMar_StatusPaymentMar" FromRole="OrderMar" ToRole="StatusPaymentMar" />
+    <NavigationProperty Name="ClientMar" Relationship="ip35Model.FK_OrderMar_ClientMar" FromRole="OrderMar" ToRole="ClientMar" />
+  </EntityType>
+  <EntityType Name="PositionMar">
+    <Key>
+      <PropertyRef Name="id_Position" />
+    </Key>
+    <Property Name="id_Position" Type="Int32" Nullable="false" />
+    <Property Name="Name_Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ServiceMar">
+    <Key>
+      <PropertyRef Name="id_Service" />
+    </Key>
+    <Property Name="id_Service" Type="Int32" Nullable="false" />
+    <Property Name="Name_Service" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderMar" Relationship="ip35Model.FK_OrderMar_ServiceMar" FromRole="ServiceMar" ToRole="OrderMar" />
+  </EntityType>
+  <EntityType Name="StatusContractMar">
+    <Key>
+      <PropertyRef Name="id_Statuc_Order" />
+    </Key>
+    <Property Name="id_Statuc_Order" Type="Int32" Nullable="false" />
+    <Property Name="Name_Status_Order" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderMar" Relationship="ip35Model.FK_OrderMar_StatusContractMar" FromRole="StatusContractMar" ToRole="OrderMar" />
+  </EntityType>
+  <EntityType Name="StatusPaymentMar">
+    <Key>
+      <PropertyRef Name="id_Status_Payment" />
+    </Key>
+    <Property Name="id_Status_Payment" Type="Int32" Nullable="false" />
+    <Property Name="Name_Status_payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderMar" Relationship="ip35Model.FK_OrderMar_StatusPaymentMar" FromRole="StatusPaymentMar" ToRole="OrderMar" />
+  </EntityType>
+  <EntityType Name="StatusSeviceMar">
+    <Key>
+      <PropertyRef Name="id_Status_Service" />
+    </Key>
+    <Property Name="id_Status_Service" Type="Int32" Nullable="false" />
+    <Property Name="Name_Status_Service" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_OrderMar_ServiceMar">
+    <End Type="ip35Model.ServiceMar" Role="ServiceMar" Multiplicity="0..1" />
+    <End Type="ip35Model.OrderMar" Role="OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceMar">
+        <PropertyRef Name="id_Service" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMar_StatusContractMar">
+    <End Type="ip35Model.StatusContractMar" Role="StatusContractMar" Multiplicity="0..1" />
+    <End Type="ip35Model.OrderMar" Role="OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusContractMar">
+        <PropertyRef Name="id_Statuc_Order" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Status_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMar_StatusPaymentMar">
+    <End Type="ip35Model.StatusPaymentMar" Role="StatusPaymentMar" Multiplicity="0..1" />
+    <End Type="ip35Model.OrderMar" Role="OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusPaymentMar">
+        <PropertyRef Name="id_Status_Payment" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Status_Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ClientMar">
+    <Key>
+      <PropertyRef Name="id_Client" />
+    </Key>
+    <Property Name="id_Client" Type="Int32" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone_Number" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderMar" Relationship="ip35Model.FK_OrderMar_ClientMar" FromRole="ClientMar" ToRole="OrderMar" />
+  </EntityType>
+  <Association Name="FK_OrderMar_ClientMar">
+    <End Type="ip35Model.ClientMar" Role="ClientMar" Multiplicity="0..1" />
+    <End Type="ip35Model.OrderMar" Role="OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientMar">
+        <PropertyRef Name="id_Client" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

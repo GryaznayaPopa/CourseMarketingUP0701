@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ip35Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClientM">
+    <Key>
+      <PropertyRef Name="id_Client" />
+    </Key>
+    <Property Name="id_Client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Company_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractMar" Relationship="Self.FK_ContractMar_ClientM" FromRole="ClientM" ToRole="ContractMar" />
+  </EntityType>
+  <EntityType Name="ContractMar">
+    <Key>
+      <PropertyRef Name="id_Contract" />
+    </Key>
+    <Property Name="id_Contract" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Client" Type="Int32" />
+    <Property Name="Number_Contract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Creation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Execution" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_Status_Payment" Type="Int32" />
+    <Property Name="Detail_Order" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_Status_Order" Type="Int32" />
+    <Property Name="id_Service" Type="Int32" />
+    <NavigationProperty Name="ClientM" Relationship="Self.FK_ContractMar_ClientM" FromRole="ContractMar" ToRole="ClientM" />
+    <NavigationProperty Name="ServiceMar" Relationship="Self.FK_ContractMar_ServiceMar" FromRole="ContractMar" ToRole="ServiceMar" />
+    <NavigationProperty Name="StatusContractMar" Relationship="Self.FK_ContractMar_StatusContractMar" FromRole="ContractMar" ToRole="StatusContractMar" />
+    <NavigationProperty Name="StatusPaymentMar" Relationship="Self.FK_ContractMar_StatusPaymentMar" FromRole="ContractMar" ToRole="StatusPaymentMar" />
+  </EntityType>
+  <EntityType Name="ServiceMar">
+    <Key>
+      <PropertyRef Name="id_Service" />
+    </Key>
+    <Property Name="id_Service" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Service" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractMar" Relationship="Self.FK_ContractMar_ServiceMar" FromRole="ServiceMar" ToRole="ContractMar" />
+  </EntityType>
+  <EntityType Name="StatusContractMar">
+    <Key>
+      <PropertyRef Name="id_Statuc_Order" />
+    </Key>
+    <Property Name="id_Statuc_Order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Status_Order" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractMar" Relationship="Self.FK_ContractMar_StatusContractMar" FromRole="StatusContractMar" ToRole="ContractMar" />
+  </EntityType>
+  <EntityType Name="StatusPaymentMar">
+    <Key>
+      <PropertyRef Name="id_Status_Payment" />
+    </Key>
+    <Property Name="id_Status_Payment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Status_payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractMar" Relationship="Self.FK_ContractMar_StatusPaymentMar" FromRole="StatusPaymentMar" ToRole="ContractMar" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Login" />
+    </Key>
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_Position" Type="Int32" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_ContractMar_ClientM">
+    <End Role="ClientM" Type="Self.ClientM" Multiplicity="0..1" />
+    <End Role="ContractMar" Type="Self.ContractMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientM">
+        <PropertyRef Name="id_Client" />
+      </Principal>
+      <Dependent Role="ContractMar">
+        <PropertyRef Name="id_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMar_ServiceMar">
+    <End Role="ServiceMar" Type="Self.ServiceMar" Multiplicity="0..1" />
+    <End Role="ContractMar" Type="Self.ContractMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceMar">
+        <PropertyRef Name="id_Service" />
+      </Principal>
+      <Dependent Role="ContractMar">
+        <PropertyRef Name="id_Service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMar_StatusContractMar">
+    <End Role="StatusContractMar" Type="Self.StatusContractMar" Multiplicity="0..1" />
+    <End Role="ContractMar" Type="Self.ContractMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusContractMar">
+        <PropertyRef Name="id_Statuc_Order" />
+      </Principal>
+      <Dependent Role="ContractMar">
+        <PropertyRef Name="id_Status_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMar_StatusPaymentMar">
+    <End Role="StatusPaymentMar" Type="Self.StatusPaymentMar" Multiplicity="0..1" />
+    <End Role="ContractMar" Type="Self.ContractMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusPaymentMar">
+        <PropertyRef Name="id_Status_Payment" />
+      </Principal>
+      <Dependent Role="ContractMar">
+        <PropertyRef Name="id_Status_Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClientM" EntityType="Self.ClientM" />
+    <EntitySet Name="ContractMar" EntityType="Self.ContractMar" />
+    <EntitySet Name="ServiceMar" EntityType="Self.ServiceMar" />
+    <EntitySet Name="StatusContractMar" EntityType="Self.StatusContractMar" />
+    <EntitySet Name="StatusPaymentMar" EntityType="Self.StatusPaymentMar" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_ContractMar_ClientM" Association="Self.FK_ContractMar_ClientM">
+      <End Role="ClientM" EntitySet="ClientM" />
+      <End Role="ContractMar" EntitySet="ContractMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMar_ServiceMar" Association="Self.FK_ContractMar_ServiceMar">
+      <End Role="ServiceMar" EntitySet="ServiceMar" />
+      <End Role="ContractMar" EntitySet="ContractMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMar_StatusContractMar" Association="Self.FK_ContractMar_StatusContractMar">
+      <End Role="StatusContractMar" EntitySet="StatusContractMar" />
+      <End Role="ContractMar" EntitySet="ContractMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMar_StatusPaymentMar" Association="Self.FK_ContractMar_StatusPaymentMar">
+      <End Role="StatusPaymentMar" EntitySet="StatusPaymentMar" />
+      <End Role="ContractMar" EntitySet="ContractMar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

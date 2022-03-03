@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ip35Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClientMar">
+    <Key>
+      <PropertyRef Name="id_Client" />
+    </Key>
+    <Property Name="id_Client" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name_Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone_Number" Type="nvarchar" MaxLength="12" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DeptMar">
+    <Key>
+      <PropertyRef Name="Id_Dept" />
+    </Key>
+    <Property Name="Id_Dept" Type="int" Nullable="false" />
+    <Property Name="Name_Dept" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ListServiceMar">
+    <Key>
+      <PropertyRef Name="id_List_Service" />
+    </Key>
+    <Property Name="id_List_Service" Type="int" Nullable="false" />
+    <Property Name="id_Order" Type="int" />
+    <Property Name="id_Service" Type="int" />
+    <Property Name="id_Dept" Type="int" />
+    <Property Name="id_Status_Service" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderMar">
+    <Key>
+      <PropertyRef Name="id_Order" />
+    </Key>
+    <Property Name="id_Order" Type="int" Nullable="false" />
+    <Property Name="id_Client" Type="int" />
+    <Property Name="Number_Contract" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date_Creation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date_Execution" Type="nvarchar" MaxLength="50" />
+    <Property Name="id_Status_Payment" Type="int" />
+    <Property Name="Detail_Order" Type="nvarchar" MaxLength="100" />
+    <Property Name="id_Status_Order" Type="int" />
+    <Property Name="id_Service" Type="int" />
+  </EntityType>
+  <EntityType Name="PositionMar">
+    <Key>
+      <PropertyRef Name="id_Position" />
+    </Key>
+    <Property Name="id_Position" Type="int" Nullable="false" />
+    <Property Name="Name_Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="id_Dept" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServiceMar">
+    <Key>
+      <PropertyRef Name="id_Service" />
+    </Key>
+    <Property Name="id_Service" Type="int" Nullable="false" />
+    <Property Name="Name_Service" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StatusContractMar">
+    <Key>
+      <PropertyRef Name="id_Statuc_Order" />
+    </Key>
+    <Property Name="id_Statuc_Order" Type="int" Nullable="false" />
+    <Property Name="Name_Status_Order" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StatusPaymentMar">
+    <Key>
+      <PropertyRef Name="id_Status_Payment" />
+    </Key>
+    <Property Name="id_Status_Payment" Type="int" Nullable="false" />
+    <Property Name="Name_Status_payment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StatusSeviceMar">
+    <Key>
+      <PropertyRef Name="id_Status_Service" />
+    </Key>
+    <Property Name="id_Status_Service" Type="int" Nullable="false" />
+    <Property Name="Name_Status_Service" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Login" />
+    </Key>
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="id_Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_OrderMar_ClientMar">
+    <End Role="ClientMar" Type="Self.ClientMar" Multiplicity="0..1" />
+    <End Role="OrderMar" Type="Self.OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientMar">
+        <PropertyRef Name="id_Client" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMar_ServiceMar">
+    <End Role="ServiceMar" Type="Self.ServiceMar" Multiplicity="0..1" />
+    <End Role="OrderMar" Type="Self.OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceMar">
+        <PropertyRef Name="id_Service" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMar_StatusContractMar">
+    <End Role="StatusContractMar" Type="Self.StatusContractMar" Multiplicity="0..1" />
+    <End Role="OrderMar" Type="Self.OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusContractMar">
+        <PropertyRef Name="id_Statuc_Order" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Status_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMar_StatusPaymentMar">
+    <End Role="StatusPaymentMar" Type="Self.StatusPaymentMar" Multiplicity="0..1" />
+    <End Role="OrderMar" Type="Self.OrderMar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusPaymentMar">
+        <PropertyRef Name="id_Status_Payment" />
+      </Principal>
+      <Dependent Role="OrderMar">
+        <PropertyRef Name="id_Status_Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ip35ModelContainer">
+    <EntitySet Name="ClientMar" EntityType="Self.ClientMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeptMar" EntityType="Self.DeptMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListServiceMar" EntityType="Self.ListServiceMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderMar" EntityType="Self.OrderMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PositionMar" EntityType="Self.PositionMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceMar" EntityType="Self.ServiceMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusContractMar" EntityType="Self.StatusContractMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusPaymentMar" EntityType="Self.StatusPaymentMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusSeviceMar" EntityType="Self.StatusSeviceMar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_OrderMar_ClientMar" Association="Self.FK_OrderMar_ClientMar">
+      <End Role="ClientMar" EntitySet="ClientMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMar_ServiceMar" Association="Self.FK_OrderMar_ServiceMar">
+      <End Role="ServiceMar" EntitySet="ServiceMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMar_StatusContractMar" Association="Self.FK_OrderMar_StatusContractMar">
+      <End Role="StatusContractMar" EntitySet="StatusContractMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMar_StatusPaymentMar" Association="Self.FK_OrderMar_StatusPaymentMar">
+      <End Role="StatusPaymentMar" EntitySet="StatusPaymentMar" />
+      <End Role="OrderMar" EntitySet="OrderMar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

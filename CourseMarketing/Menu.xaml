@@ -1,0 +1,15 @@
+﻿<Window x:Class="CourseMarketing.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseMarketing"
+        mc:Ignorable="d"
+        Title="Menu" Height="317" Width="381">
+    <Grid>
+        <Button x:Name="ClientListNextButton" Content="Клиенты" HorizontalAlignment="Center" Margin="135,94,135,0" VerticalAlignment="Top" Height="30" Width="103" Click="Button_Click"/>
+        <Button x:Name="ContractListNextButton" Content="Заказы" HorizontalAlignment="Center" Margin="135,165,135,0" VerticalAlignment="Top" Height="30" Width="103" Click="Button_Click_1"/>
+        <Button x:Name="ButtonBackLogin" Content="Выйти из учетки" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Width="104" Click="ButtonBackLogin_Click"/>
+
+    </Grid>
+</Window>

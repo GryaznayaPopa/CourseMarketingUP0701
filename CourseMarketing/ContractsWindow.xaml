@@ -1,0 +1,40 @@
+﻿<Window x:Class="CourseMarketing.Orders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseMarketing"
+        mc:Ignorable="d"
+        Title="Заказы" Height="450" Width="1000.735" Style="{StaticResource windowStyle}" >
+    <Grid>
+        <Button x:Name="ContractBackMenuButton" Content="Назад" HorizontalAlignment="Left" Margin="866,294,0,0" VerticalAlignment="Top" Width="75" Click="ContractBackMenuButton_Click"/>
+        <Button x:Name="ButtonCloseContract" Content="Выход" HorizontalAlignment="Left" Margin="866,373,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="AddContractButton" Content="Добавить заказ" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Width="126" Click="AddContractButton_Click"/>
+        <DataGrid x:Name="GridContractData" HorizontalAlignment="Left" Height="282" Margin="10,127,0,0" VerticalAlignment="Top" Width="839" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Заказ №" Binding="{Binding NumberO}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ФИО клиента" Binding="{Binding FIOClient}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Договор №" Binding="{Binding NumberContract}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата создания" Binding="{Binding DateCreat}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата исполнения" Binding="{Binding DateExe}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Статус оплаты" Binding="{Binding StatusPay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание заказа" Binding="{Binding DetailContract}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Услуга" Binding="{Binding Service}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Редактирование">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Tag="{Binding NumberO}" Content ="Редактирование"  Click ="EditContractButton"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Удаление">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Tag="{Binding NumberO}" Content ="Удаление"  Click ="Button_Delete_Contract"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

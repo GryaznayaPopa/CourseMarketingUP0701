@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ip35ModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ip35Model.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="id_Position" ColumnName="id_Position" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeptMar">
+      <EntityTypeMapping TypeName="ip35Model.DeptMar">
+        <MappingFragment StoreEntitySet="DeptMar">
+          <ScalarProperty Name="Name_Dept" ColumnName="Name_Dept" />
+          <ScalarProperty Name="Id_Dept" ColumnName="Id_Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListServiceMar">
+      <EntityTypeMapping TypeName="ip35Model.ListServiceMar">
+        <MappingFragment StoreEntitySet="ListServiceMar">
+          <ScalarProperty Name="id_Status_Service" ColumnName="id_Status_Service" />
+          <ScalarProperty Name="id_Dept" ColumnName="id_Dept" />
+          <ScalarProperty Name="id_Service" ColumnName="id_Service" />
+          <ScalarProperty Name="id_Order" ColumnName="id_Order" />
+          <ScalarProperty Name="id_List_Service" ColumnName="id_List_Service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderMar">
+      <EntityTypeMapping TypeName="ip35Model.OrderMar">
+        <MappingFragment StoreEntitySet="OrderMar">
+          <ScalarProperty Name="id_Service" ColumnName="id_Service" />
+          <ScalarProperty Name="id_Status_Order" ColumnName="id_Status_Order" />
+          <ScalarProperty Name="Detail_Order" ColumnName="Detail_Order" />
+          <ScalarProperty Name="id_Status_Payment" ColumnName="id_Status_Payment" />
+          <ScalarProperty Name="Date_Execution" ColumnName="Date_Execution" />
+          <ScalarProperty Name="Date_Creation" ColumnName="Date_Creation" />
+          <ScalarProperty Name="Number_Contract" ColumnName="Number_Contract" />
+          <ScalarProperty Name="id_Client" ColumnName="id_Client" />
+          <ScalarProperty Name="id_Order" ColumnName="id_Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PositionMar">
+      <EntityTypeMapping TypeName="ip35Model.PositionMar">
+        <MappingFragment StoreEntitySet="PositionMar">
+          <ScalarProperty Name="id_Dept" ColumnName="id_Dept" />
+          <ScalarProperty Name="Name_Position" ColumnName="Name_Position" />
+          <ScalarProperty Name="id_Position" ColumnName="id_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceMar">
+      <EntityTypeMapping TypeName="ip35Model.ServiceMar">
+        <MappingFragment StoreEntitySet="ServiceMar">
+          <ScalarProperty Name="Name_Service" ColumnName="Name_Service" />
+          <ScalarProperty Name="id_Service" ColumnName="id_Service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusContractMar">
+      <EntityTypeMapping TypeName="ip35Model.StatusContractMar">
+        <MappingFragment StoreEntitySet="StatusContractMar">
+          <ScalarProperty Name="Name_Status_Order" ColumnName="Name_Status_Order" />
+          <ScalarProperty Name="id_Statuc_Order" ColumnName="id_Statuc_Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusPaymentMar">
+      <EntityTypeMapping TypeName="ip35Model.StatusPaymentMar">
+        <MappingFragment StoreEntitySet="StatusPaymentMar">
+          <ScalarProperty Name="Name_Status_payment" ColumnName="Name_Status_payment" />
+          <ScalarProperty Name="id_Status_Payment" ColumnName="id_Status_Payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusSeviceMar">
+      <EntityTypeMapping TypeName="ip35Model.StatusSeviceMar">
+        <MappingFragment StoreEntitySet="StatusSeviceMar">
+          <ScalarProperty Name="Name_Status_Service" ColumnName="Name_Status_Service" />
+          <ScalarProperty Name="id_Status_Service" ColumnName="id_Status_Service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientMar">
+      <EntityTypeMapping TypeName="ip35Model.ClientMar">
+        <MappingFragment StoreEntitySet="ClientMar">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Name_Company" ColumnName="Name_Company" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="id_Client" ColumnName="id_Client" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

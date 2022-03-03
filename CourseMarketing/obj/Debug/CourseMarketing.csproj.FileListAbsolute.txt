@@ -1,0 +1,67 @@
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\CourseMarketing.exe.config
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\CourseMarketing.exe
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\CourseMarketing.pdb
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.dll
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.SqlServer.dll
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.xml
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.SqlServer.xml
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\bin\Debug\ru\EntityFramework.resources.dll
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.AssemblyReference.cache
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.SuggestedBindingRedirects.cache
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\MainWindow.g.cs
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\Menu.g.cs
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\App.g.cs
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing_Content.g.cs
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing_MarkupCompile.cache
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing_MarkupCompile.lref
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\MainWindow.baml
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\Menu.baml
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.g.resources
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.Properties.Resources.resources
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.GenerateResource.cache
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.CoreCompileInputs.cache
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.CopyComplete
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.exe
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.pdb
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\Clients.g.cs
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\Orders.g.cs
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\Clients.baml
+Y:\Student\18ИП2\ПМ.07 КР\1 подгруппа\Киров-Малюгин\CourseMarketing\CourseMarketing\obj\Debug\Orders.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\CourseMarketing.exe.config
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\CourseMarketing.exe
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\CourseMarketing.pdb
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.dll
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.xml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.AssemblyReference.cache
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\Clients.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\MainWindow.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\Menu.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\App.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing_Content.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing_MarkupCompile.cache
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing_MarkupCompile.lref
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\Clients.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\MainWindow.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\Menu.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.g.resources
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.Properties.Resources.resources
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.GenerateResource.cache
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.CoreCompileInputs.cache
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.csproj.CopyComplete
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.exe
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\CourseMarketing.pdb
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\AddClientWindow.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\AddContractWindow.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\EditClientWindow.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\ContractsWindow.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\AddClientWindow.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\AddContractWindow.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\EditClientWindow.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\ContractsWindow.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\EditContractWindow.g.cs
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\EditContractWindow.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\StulyProgramm.baml
+C:\Users\densp\Desktop\Отчеты\курсовая\CourseMarketing\CourseMarketing\obj\Debug\App.baml
